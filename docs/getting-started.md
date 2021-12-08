@@ -441,7 +441,7 @@ require('https')
 Express.js example integration
 
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 const express = require('express')
 const expressApp = express()
 
@@ -461,7 +461,7 @@ expressApp.listen(3000, () => {
 Fastify example integration
 
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 const fastifyApp = require('fastify')()
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
@@ -480,7 +480,7 @@ fastifyApp.listen(3000, () => {
 Koa.js example integration
 
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 const Koa = require('koa')
 const koaBody = require('koa-body')
 
@@ -549,7 +549,7 @@ bot.on('message', (ctx) => {
 To enable Telegram Passport support you can use [`telegram-passport`](https://www.npmjs.com/package/telegram-passport) package:
 
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 const TelegramPassport = require('telegram-passport')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
@@ -586,7 +586,7 @@ module.exports = Composer.mount(
 To run modules you can use `telegraf` module runner, it allows you to start Telegraf module easily from the command line.
 
 ```bash
-npm install telegraf -g
+npm install telegraf-develop -g
 ```
 
 ## Telegraf CLI usage

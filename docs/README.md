@@ -1,16 +1,12 @@
 ![Telegraf](media/header.png)
 
-You're reading legacy 3.x docs, see
-[4.0.0 release notes](https://github.com/telegraf/telegraf/releases/tag/v4.0.0)
-or [4.x docs](https://telegraf.js.org).
-
 ## Introduction
 
 Bots are special [Telegram](https://telegram.org) accounts designed to handle messages automatically. Users can interact with bots by sending them command messages in private or group chats. These accounts serve as an interface for code running somewhere on your server.
 
 ## Features
 
-- Full [Telegram Bot API 5.0](https://core.telegram.org/bots/api) support
+- Full [Telegram Bot API 5.5](https://core.telegram.org/bots/api) support
 - [Telegram Payment Platform](https://telegram.org/blog/payments)
 - [HTML5 Games](https://core.telegram.org/bots/api#games)
 - [Inline mode](https://core.telegram.org/bots/api#inline-mode)
@@ -23,19 +19,19 @@ Bots are special [Telegram](https://telegram.org) accounts designed to handle me
 ## Installation
 
 ```bash
-npm install telegraf --save
+npm install telegraf-develop --save
 ```
 
 or using yarn
 
 ```bash
-yarn add telegraf
+yarn add telegraf-develop
 ```
 
 ## Example
   
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply('Welcome'))
@@ -46,7 +42,7 @@ bot.launch()
 ```
 
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.command('oldschool', (ctx) => ctx.reply('Hello'))

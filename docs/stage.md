@@ -3,7 +3,7 @@
 Simple scene-based control flow middleware.
 
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 const session = require('telegraf/session')
 const Stage = require('telegraf/stage')
 const Scene = require('telegraf/scenes/base')

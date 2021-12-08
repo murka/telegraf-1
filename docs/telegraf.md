@@ -3,7 +3,7 @@
 Telegraf API reference
 
 ```js
-const { Telegraf } = require('telegraf')
+const { Telegraf } = require('telegraf-develop')
 ```
 
 ## Constructor
