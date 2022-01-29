@@ -37,6 +37,11 @@ test('should generate web preview options', (t) => {
   t.deepEqual(extra, { disable_web_page_preview: true })
 })
 
+test('should generate protect content options', (t) => {
+  const extra = { ...Extra.protectContent(true) }
+  t.deepEqual(extra, { protect_content: true })
+})
+
 test('should generate markup options', (t) => {
   const extra = { ...Extra.markup(Markup.removeKeyboard()) }
   t.deepEqual(extra, { reply_markup: { remove_keyboard: true } })

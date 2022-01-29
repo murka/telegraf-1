@@ -1,28 +1,32 @@
 /** @format */
 
-import { Markup } from './markup';
+import { Markup } from './markup'
 import * as tt from './telegram-types.d'
 
 export declare class Extra {
   constructor(opts: tt.Extra)
 
-  load<T extends tt.Extra>(opts: T): Extra & T | this
+  load<T extends tt.Extra>(opts: T): (Extra & T) | this
 
-  inReplyTo(messageId: string | number): Extra & tt.ExtraReplyMessage | this
+  inReplyTo(messageId: string | number): (Extra & tt.ExtraReplyMessage) | this
 
-  notifications(value?: boolean): Extra & tt.ExtraDisableNotifications | this
+  notifications(value?: boolean): (Extra & tt.ExtraDisableNotifications) | this
 
-  webPreview(value?: boolean): Extra & tt.ExtraDisableWebPagePreview | this
+  webPreview(value?: boolean): (Extra & tt.ExtraDisableWebPagePreview) | this
 
-  markup<T extends tt.KeyboardMarkupBundle>(markup: ((m: Markup<tt.KeyboardMarkupBundle>) => T) | T): Extra & tt.ExtraReply<T> | this
+  protectContent(value?: boolean): (Extra & tt.ExtraProtectContent) | this
 
-  HTML(value?: boolean): Extra & tt.ExtraFormatting | this
+  markup<T extends tt.KeyboardMarkupBundle>(
+    markup: ((m: Markup<tt.KeyboardMarkupBundle>) => T) | T
+  ): (Extra & tt.ExtraReply<T>) | this
 
-  markdown(value?: boolean): Extra & tt.ExtraFormatting | this
+  HTML(value?: boolean): (Extra & tt.ExtraFormatting) | this
 
-  markdownV2(value?: boolean): Extra & tt.ExtraFormatting | this
+  markdown(value?: boolean): (Extra & tt.ExtraFormatting) | this
 
-  caption(caption: string): Extra & tt.ExtraCaption | this
+  markdownV2(value?: boolean): (Extra & tt.ExtraFormatting) | this
+
+  caption(caption: string): (Extra & tt.ExtraCaption) | this
 
   static load<T extends tt.Extra>(opts: T): Extra & T
 
@@ -32,7 +36,11 @@ export declare class Extra {
 
   static webPreview(value?: boolean): Extra & tt.ExtraDisableWebPagePreview
 
-  static markup<T extends tt.KeyboardMarkupBundle>(markup: ((m: Markup<tt.KeyboardMarkupBundle>) => T) | T): Extra & tt.ExtraReply<T>
+  static protectContent(value?: boolean): Extra & tt.ExtraProtectContent
+
+  static markup<T extends tt.KeyboardMarkupBundle>(
+    markup: ((m: Markup<tt.KeyboardMarkupBundle>) => T) | T
+  ): Extra & tt.ExtraReply<T>
 
   static HTML(value?: boolean): Extra & tt.ExtraFormatting
 
