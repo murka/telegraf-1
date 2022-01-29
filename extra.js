@@ -24,6 +24,11 @@ class Extra {
     return this
   }
 
+  protectContent (value = false) {
+    this.protect_content = !value
+    return this
+  }
+
   markup (markup) {
     if (typeof markup === 'function') {
       markup = markup(new Markup())
@@ -62,6 +67,10 @@ class Extra {
 
   static webPreview (value) {
     return new Extra().webPreview(value)
+  }
+
+  static protectContent (value) {
+    return new Extra().protectContent(value)
   }
 
   static load (opts) {

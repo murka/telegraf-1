@@ -107,6 +107,7 @@ export type MessageEntityType =
   | 'text_link'
   | 'text_mention'
   | 'pre'
+  | 'spoiler'
 
 export type InlineQueryResult =
   TT.InlineQueryResultCachedAudio |
@@ -356,6 +357,13 @@ export interface ExtraDisableWebPagePreview {
    * Disables link previews for links in this message
    */
   disable_web_page_preview?: boolean
+}
+
+export interface ExtraProtectContent {
+  /**
+   * Protects the contents of the sent message from forwarding and saving
+   */
+   protect_content?: boolean
 }
 
 export interface ExtraDisableNotifications {
