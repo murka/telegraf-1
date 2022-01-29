@@ -39,7 +39,7 @@ test('should generate web preview options', (t) => {
 
 test('should generate protect content options', (t) => {
   const extra = { ...Extra.protectContent(true) }
-  t.deepEqual(extra, { protect_content: false })
+  t.deepEqual(extra, { protect_content: true })
 })
 
 test('should generate markup options', (t) => {

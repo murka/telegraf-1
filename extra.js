@@ -25,7 +25,7 @@ class Extra {
   }
 
   protectContent (value = false) {
-    this.protect_content = !value
+    this.protect_content = value
     return this
   }
 
